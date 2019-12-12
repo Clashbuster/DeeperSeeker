@@ -1,0 +1,2 @@
+class RiddlesController < ApplicationController
+end
