@@ -2,6 +2,7 @@
 var players = null
 
 
+
 fetch("http://localhost:3000/players")
   .then(function(response) {
     return response.json();
@@ -13,6 +14,9 @@ fetch("http://localhost:3000/players")
   function showPlayers (playerArray) {
 
   }
+
+
+  
 
 
 

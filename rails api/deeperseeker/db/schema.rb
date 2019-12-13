@@ -31,12 +31,14 @@ ActiveRecord::Schema.define(version: 2019_12_12_231542) do
 
   create_table "players", force: :cascade do |t|
     t.string "name"
+    t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "riddles", force: :cascade do |t|
     t.string "name"
+    t.string "story_text"
     t.string "riddle_text"
     t.string "correct"
     t.string "wrong"

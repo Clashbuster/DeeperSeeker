@@ -3,12 +3,16 @@
 }
 
 body {
-    background-image: url("num10.png");
+    background-image: url("images/num10.png");
     color: white;
     display: grid;
     grid-template-rows: [bfirst] 12% [bsecond] 70% [bthird] 18% [bfourth] 0%;
     grid-template-columns: [bc1] 100%;
     height: 100vh;
+  }
+
+  div#logo {
+    max-height: 70px;
   }
 
   head {
@@ -34,7 +38,8 @@ body {
     grid-row-end: bsecond;
     margin-bottom: 30px;
     margin-top: 0;
-    background: #f67280;
+    background-image: url("images/toolnav.png");
+    /* background: #f67280; */
     margin:0px;
     padding: 10px;
     display: grid;
@@ -44,7 +49,7 @@ body {
   }
 
   h1#logo-text {
-    height: 78%;
+    max-height: 70px;
     width: 100%;
     margin: 0%;
     padding: 10px;
@@ -118,15 +123,43 @@ body {
   }
 
 li#story-text {
-  text-align: left;
   grid-column-start: spfirst;
   grid-column-end: spsecond;
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-rows: [stfirst] auto [stsecond] auto [stthird] auto [stfourth] auto [stfifth] 0%;
 
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 10px;
+}
+
+h1#story-intro {
+  text-align: center;
+  grid-row-start: stfirst;
+  grid-row-end: stsecond;
+}
+
+p#text-for-story {
+  height: 100%;
+  text-align: left;
+  grid-row-start: stsecond;
+  grid-row-end: stthird;
+}
+
+img#story-image {
+  text-align: center;
+  grid-row-start: stthird;
+  grid-row-end: stfourth;
+  justify-self: center;
+}
+
+div#riddle-text {
+  height: 100%;
+  text-align: left;
+  grid-row-start: stfourth;
+  grid-row-end: stfifth;
 }
 
 li#character-picture {
@@ -138,7 +171,7 @@ li#btn1 {
   border-radius: 12px;
   height: 30%;
   width: 50%;
-  background-color: #f67280;
+  /* background-color: #f67280; */
   margin-top: 8%;
   margin-bottom: 8%;
   margin-right: 24%;
@@ -148,18 +181,71 @@ li#btn1 {
   padding-right: 24%;
   padding-left: 24%; */
   text-align: center;
+  background-image: url("images/toolnav.png");
+  display: table;
+}
+
+
+
+li#btn1 p {
+  height: 100%;
+  width: 100%;
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
 }
 
 li#btn2 {
   border-radius: 12px;
   height: 30%;
   width: 50%;
-  background-color: #f67280;
+  /* background-color: #f67280; */
   margin-top: 8%;
   margin-bottom: 8%;
   margin-right: 24%;
   margin-left: 24%;
   text-align: center;
+  background-image: url("images/toolnav.png");
+}
+
+li#btn2 p {
+  height: 100%;
+  width: 100%;
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+li#btn1 p:hover {
+  background: #f67280;
+  border-radius: 12px;
+}
+
+li#btn2 p:hover {
+  background: #f67280;
+  border-radius: 12px;
+}
+
+input#name-input {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+  background-image: url("images/toolnav.png");
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration-color: white;
+}
+
+input#name-input :focus {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+  background-image: url("images/toolnav.png");
+}
+
+form#name-form {
+  text-align: center;
+  justify-self: center;
 }
 
 
