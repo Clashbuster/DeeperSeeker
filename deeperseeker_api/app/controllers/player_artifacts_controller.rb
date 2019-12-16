@@ -1,0 +1,2 @@
+class PlayerArtifactsController < ApplicationController
+end

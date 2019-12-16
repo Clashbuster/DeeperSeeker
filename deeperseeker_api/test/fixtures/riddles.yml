@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  points: 1
+  story_text: MyString
+  riddle_text: MyString
+
+two:
+  name: MyString
+  points: 1
+  story_text: MyString
+  riddle_text: MyString

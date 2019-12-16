@@ -1,0 +1,2 @@
+class PlayerRiddlesController < ApplicationController
+end

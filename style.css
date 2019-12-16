@@ -1,5 +1,9 @@
 * {
   margin-top: 0;
+
+   font-size: 16px;
+   font-family: Helvetica;
+
 }
 
 body {
@@ -123,12 +127,14 @@ body {
   }
 
 li#story-text {
+  border-radius: 12px;
+  background: rgba(0,0,0, 0.5);
   grid-column-start: spfirst;
   grid-column-end: spsecond;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: [stfirst] auto [stsecond] auto [stthird] auto [stfourth] auto [stfifth] 0%;
+  grid-template-rows: [stfirst] auto [stsecond] auto [stthird] auto [stfourth] auto [stfifth] auto;
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -162,9 +168,12 @@ div#riddle-text {
   grid-row-end: stfifth;
 }
 
-li#character-picture {
+img#character-picture {
+  margin: auto;
+  grid-column-start: spsecond;
+  grid-column-end: sthird;
   padding: 10px;
-  text-align: center;
+  justify-self: center;
 }
 
 li#btn1 {
@@ -206,12 +215,16 @@ li#btn2 {
   margin-left: 24%;
   text-align: center;
   background-image: url("images/toolnav.png");
+  display: table;
 }
 
 li#btn2 p {
   height: 100%;
   width: 100%;
   display: table-cell; 
+  /* vertical-align: middle; 
+  text-align: center; */
+  padding: 0%;
   vertical-align: middle; 
   text-align: center; 
 }
@@ -246,6 +259,31 @@ input#name-input :focus {
 form#name-form {
   text-align: center;
   justify-self: center;
+  grid-row-start: stfifth;
+  
+}
+
+
+.riddle-answer {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+  background-image: url("images/toolnav.png");
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration-color: white;
+}
+
+.riddle-form {
+  text-align: center;
+  justify-self: center;
+}
+
+.riddle-answer :focus {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+  background-image: url("images/toolnav.png");
 }
 
 
