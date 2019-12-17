@@ -1,6 +1,11 @@
 // let dog = fetch('http://localhost:3000/players')
 // let players = null;
-let currentPlayer = null;
+let currentPlayer = {
+  'id': 0,
+  'name': "",
+  'points': 0,
+  'problem_id': 0
+}
 let problemCounter = 0;
 let currentAnswer = null;
 let currentHealth = 100;
@@ -59,11 +64,15 @@ function setUpBtn1() {
   let buttonContainer = document.getElementById('decisions-list');
       buttonContainer.appendChild(newButton1);
 
-      let answer = document.getElementById("name-input").value;
 // / adds eventlistener to new btn1
       newButton1.addEventListener("click", function(e) {
         e.preventDefault;
+        let answer = document.getElementById("name-input").value;
+        // console.log("yoyo");
         if (answer == currentAnswer) {
+          currentPlayer['problem_id'] = problemCounter; 
+          // console.log("yoyo");
+          correctAnswer(currentPlayer);
           addNextProblem();
         } else {
           currentHappiness -= 5;
@@ -100,9 +109,19 @@ function setUpBtn2() {
 }
 
 
-//This function 
-function correctAnswer() {
-
+//This function updates the database when a correct answer is given. 
+function correctAnswer(player) {
+  // console.log("yoyo");
+  fetch(`http://localhost:3000/correctanswer`, {
+    method: "POST",
+    body: JSON.stringify(player),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => res.json())
+  .then(data => {
+   console.log(data);
+  })
 }
 
 
@@ -120,7 +139,12 @@ function createPlayer(player) {
     headers: {
       "Content-Type": "application/json"
     }
-  });
+  }).then(res => res.json())
+  .then(data => {
+    currentPlayer["name"] = data.name;
+    currentPlayer["id"] = data.id;
+    currentPlayer["points"] = data.points;
+  })
 }
 
 //initial button 1 setup
@@ -134,7 +158,7 @@ function initialButton1Setup() {
     }
     createPlayer(readyToPostPlayer);
     document.getElementById("name-input").value = "";
-    currentPlayer = newPlayerName;
+    currentPlayer["name"] = newPlayerName;
     addNextProblem();
   });
 }
@@ -149,7 +173,7 @@ function initialButton2Setup() {
     }
     createPlayer(readyToPostPlayer);
     document.getElementById("name-input").value = "";
-    currentPlayer = "The one who has no name!";
+    currentPlayer["name"] = "The one who has no name!";
     addNextProblem();
   });
 }

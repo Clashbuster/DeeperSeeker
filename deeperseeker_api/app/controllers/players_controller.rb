@@ -1,8 +1,14 @@
 class PlayersController < ApplicationController
 
         def correct_answer
-            player.find
-            
+            # byebug
+            player = Player.find(params[:id])
+            artifacts = Artifact.all
+            artifact = artifacts.sample
+
+            player.player_artifacts.create(artifact_id: artifact.id)
+            player.player_riddles.create(riddle_id: params[:problem_id])
+            render json: player.artifacts
         end
 
         def show
@@ -21,6 +27,7 @@ class PlayersController < ApplicationController
   
         def create
             player = Player.create(player_params)
+            render json: player
         end
        
         private

@@ -20,12 +20,12 @@
 
     Artifact.create(name: "The Wind Idol", points: 10)
     Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
-    Artifact.create(name: "Joey's necklance", points: 5)
+    Artifact.create(name: "Doge collar", points: 7)
+    Artifact.create(name: "A fraction of a bitcoin", points: 80)
+    Artifact.create(name: "Taylor's number", points: 8177336127)
+    Artifact.create(name: "The Monkey Idol", points: 8)
+    Artifact.create(name: "The Earth Idol", points: 11)
+    Artifact.create(name: "The Fire Idol", points: 6)
 
 
 # easier problems
@@ -52,13 +52,29 @@ Riddle.create(name: "Sum of Multiples", points: 10, story_text: "Pico entered so
     
     riddle_text: "Alert! Before launch, all of the connectors must be mapped.
     
-    The scaffold is 999 feet high. There must be ONE connector at every mutliple of 3 or 5 feet. In order for the computer to know you've completed the connector mapping, report the sum of the height for every single connector.",
+    The scaffold is 999 feet high. There must be ONE connector at every mutliple of 3 or 5 feet. In order for the computer to know you've completed the connector mapping, report the sum of every connector's height.",
     correct_answer: 233168)
 
 # Riddle.create(name: "Difference of Squares", points: 10, story_text: "Pico")
 
+Riddle.create(name: "Even Fibbonacci numbers", points: 10, story_text: "Pico encounters a dusty tome on the ground. It's at least a thousand pages long and many of the pages are filled with some kind of code. He flips through it aimlessly since he can't make sense of a large string of digits like you can.
 
+    By pure chance he lands on a page with some english text. Since Pico is hopelessly curious he reads it.
 
+    \" My name is Herald, and I used to be scientist. That's right. Used to be. Now I'm a ground prophet haha! Ground prophets are the greatest, and like all ground prophets I know lots of things about The Great Deep.
+    For Example, his Deepness seems to like things that are clean. That's why we clean our labs so much. Spend all day cleaning. But after contemplating the Deep visions for many days I've learned that clean can be interpreted in many ways.
+
+    Since I'm a ground prophet it's my job to interpret the Deepeness's visions, and I've decided that even numbers are clean, and we need more even numbers isn't that right Jerry?\"
+
+    The passage becomes pure jibberish after that, and even Pico with his dull mind finds it odd that Herald the ex scientist would be asking Jerry things in writing like that. In any case there is a box on the next page that asks a question.",
+
+    riddle_text: "Since The Great Deep likes even numbers he wants to see their power too.
+
+    Take every even number from a fibbonacci sequence where the values do not exceed 4 million.
+        
+    Then add them together and tell me the sum.",
+
+    correct_answer: 4613732)
 
 
 # harder problems
@@ -72,3 +88,4 @@ Riddle.create(name: "Sum of all Primes", points: 80, story_text: "Pico ecounters
 
     Tell The Great Deep the sum of all primes below 2000000",
     correct_answer: 142913828922)
+
