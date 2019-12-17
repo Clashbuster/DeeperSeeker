@@ -1,17 +1,17 @@
 // let dog = fetch('http://localhost:3000/players')
-let players = null;
+// let players = null;
 let currentPlayer = null;
 let problemCounter = 0;
 let currentAnswer = null;
 let currentHealth = 100;
 let currentHappiness = 100;
-let aquiredArtifacts = [];
 
+// setting up the beggining of the page
 initialButton1Setup();
 initialButton2Setup();
 
 
-//this function is going to fetch the next riddle from the api and display it on the screen. Then it's going to set up the buttons listeners
+//this function is going to fetch the next riddle from the api and display it on the screen. Then it's going to call the button resetter functions
 function addNextProblem() {
   document.getElementById("name-input").value = "";
   problemCounter += 1;
@@ -20,7 +20,7 @@ function addNextProblem() {
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
+    // console.log(data);
     let newAnswerForm = document.getElementById("name-form");
     let nextQuestion = data;
     let title = document.getElementById("story-intro");
@@ -28,8 +28,9 @@ function addNextProblem() {
     let riddleText = document.getElementById("riddle-text");
 
     let formChildren = newAnswerForm.childNodes;
-    let btn2Text = document.getElementById('btn2')
+    // let btn2Text = document.getElementById('btn2')
    
+    
     formChildren[0].nodeValue = "Answer :";
     title.innerText = nextQuestion.name;
     storyText.innerText = nextQuestion.story_text;
@@ -38,13 +39,11 @@ function addNextProblem() {
 
     setUpBtn1();
     setUpBtn2();
-
-
   });
 }
 
 
-// this function resets btn1
+// this function resets btn1 (the submit button)
 function setUpBtn1() {
   
   //generate new button
@@ -61,7 +60,7 @@ function setUpBtn1() {
       buttonContainer.appendChild(newButton1);
 
       let answer = document.getElementById("name-input").value;
-
+// / adds eventlistener to new btn1
       newButton1.addEventListener("click", function(e) {
         e.preventDefault;
         if (answer == currentAnswer) {
@@ -74,6 +73,7 @@ function setUpBtn1() {
       })
 }
 
+//this function resets btn2 (the skip button)
 function setUpBtn2() {
   
   //generate new button
@@ -89,8 +89,7 @@ function setUpBtn2() {
   let buttonContainer = document.getElementById('decisions-list');
       buttonContainer.appendChild(newButton2);
 
-      let answer = document.getElementById("name-input").value;
-
+// / adds eventlistener to new btn2
       newButton2.addEventListener("click", function(e) {
           e.preventDefault;
         
@@ -101,6 +100,10 @@ function setUpBtn2() {
 }
 
 
+//This function 
+function correctAnswer() {
+
+}
 
 
 
@@ -109,6 +112,7 @@ function setUpBtn2() {
 
 
 
+//this function posts a new player to the database
 function createPlayer(player) {
   fetch("http://localhost:3000/players", {
     method: "POST",

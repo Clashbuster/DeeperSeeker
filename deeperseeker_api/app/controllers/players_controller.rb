@@ -1,6 +1,7 @@
 class PlayersController < ApplicationController
 
-        def correct_answer?
+        def correct_answer
+            player.find
             
         end
 
