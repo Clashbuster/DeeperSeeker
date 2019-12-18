@@ -1,5 +1,7 @@
 class PlayersController < ApplicationController
 
+
+
         def correct_answer
             # byebug
             player = Player.find(params[:id])
@@ -8,7 +10,17 @@ class PlayersController < ApplicationController
 
             player.player_artifacts.create(artifact_id: artifact.id)
             player.player_riddles.create(riddle_id: params[:problem_id])
-            render json: player.artifacts
+
+            player_points = 0
+
+            player.riddles.each do |n|
+                player_points += n.points
+            end
+            player.artifacts.each do |n|
+                player_points += n.points
+            end
+   
+            render json: player_points
         end
 
         def show
@@ -33,7 +45,7 @@ class PlayersController < ApplicationController
         private
        
         def player_params
-            params.require(:player).permit(:name, :points)
+            params.require(:player).permit(:name, :leader_board_points)
         end
   
 end

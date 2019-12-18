@@ -14,6 +14,7 @@ let currentHappiness = 100;
 // setting up the beggining of the page
 initialButton1Setup();
 initialButton2Setup();
+disableInputDefaults();
 
 
 //this function is going to fetch the next riddle from the api and display it on the screen. Then it's going to call the button resetter functions
@@ -75,8 +76,8 @@ function setUpBtn1() {
           correctAnswer(currentPlayer);
           addNextProblem();
         } else {
-          currentHappiness -= 5;
-          currentHealth -= 5;
+          currentHappiness -= 10;
+          currentHealth -= 10;
           addNextProblem();
         }
       })
@@ -102,12 +103,33 @@ function setUpBtn2() {
       newButton2.addEventListener("click", function(e) {
           e.preventDefault;
         
-          currentHappiness -= 5;
-          currentHealth -= 5;
+          currentHappiness -= 10;
+          currentHealth -= 10;
           addNextProblem();
       })
 }
 
+function displayArtifactOnPage() {
+
+}
+
+function putPointsOnPage() {
+  
+}
+
+function displayPointsOnPage(data) {
+  let points = document.querySelector('#points-counter')
+  points.innerText = data;
+}
+
+function disableInputDefaults() {
+  document.querySelector('#name-form').addEventListener("submit", function(event){
+    event.preventDefault()
+  });
+  document.querySelector('#name-input').addEventListener("click", function(event){
+    event.preventDefault()
+  });
+}
 
 //This function updates the database when a correct answer is given. 
 function correctAnswer(player) {
@@ -120,16 +142,9 @@ function correctAnswer(player) {
     }
   }).then(res => res.json())
   .then(data => {
-   console.log(data);
+   displayPointsOnPage(data)
   })
 }
-
-
-
-
-
-
-
 
 //this function posts a new player to the database
 function createPlayer(player) {
@@ -177,5 +192,3 @@ function initialButton2Setup() {
     addNextProblem();
   });
 }
-
-
