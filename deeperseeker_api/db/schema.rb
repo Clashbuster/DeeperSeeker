@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_15_214823) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "leader_board_points"
+    t.integer "problem_failed_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,6 +1,16 @@
 class PlayersController < ApplicationController
 
+        def game_over
+            
+            player = Player.find(params[:id])
+            player.problem_failed_at = params[:problem_id]
+            player.leader_board_points = params[:final_points]
+            player.save
 
+
+            players = Player.all
+            render json: players 
+        end
 
         def correct_answer
             # byebug

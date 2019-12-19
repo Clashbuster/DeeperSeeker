@@ -3,7 +3,7 @@
 let currentPlayer = {
   'id': 0,
   'name': "",
-  'points': 0,
+  'final_points': 0,
   'problem_id': 0
 }
 let problemCounter = 0;
@@ -76,9 +76,14 @@ function setUpBtn1() {
           correctAnswer(currentPlayer);
           addNextProblem();
         } else {
-          currentHappiness -= 10;
-          currentHealth -= 10;
-          addNextProblem();
+          currentHappiness -= 20;
+          currentHealth -= 20;
+
+          if(currentHealth <= 0) {
+            displayDeathScreen();
+          } else {
+            addNextProblem();
+          }
         }
       })
 }
@@ -103,18 +108,19 @@ function setUpBtn2() {
       newButton2.addEventListener("click", function(e) {
           e.preventDefault;
         
-          currentHappiness -= 10;
-          currentHealth -= 10;
-          addNextProblem();
+          currentHappiness -= 20;
+          currentHealth -= 20;
+
+          if(currentHealth <= 0) {
+            displayDeathScreen();
+          } else {
+            addNextProblem();
+          }
       })
 }
 
 function displayArtifactOnPage() {
 
-}
-
-function putPointsOnPage() {
-  
 }
 
 function displayPointsOnPage(data) {
@@ -169,7 +175,7 @@ function initialButton1Setup() {
     let newPlayerName = document.getElementById("name-input").value
     let readyToPostPlayer = {
       name: newPlayerName,
-      points: 0
+      leader_board_points: 0
     }
     createPlayer(readyToPostPlayer);
     document.getElementById("name-input").value = "";
@@ -184,11 +190,56 @@ function initialButton2Setup() {
     e.preventDefault();
     let readyToPostPlayer = {
       name: "The one who has no name!",
-      points: 0
+      leader_board_points: 0
     }
     createPlayer(readyToPostPlayer);
     document.getElementById("name-input").value = "";
     currentPlayer["name"] = "The one who has no name!";
     addNextProblem();
+  });
+}
+
+function displayDeathScreen() {
+  let newDeathStoryElement = document.querySelector('#text-for-story')
+  let newDeathTitleElement = document.querySelector('#story-intro')
+  let newDeathImageElement = document.querySelector('#story-image')
+  let newDeathFinalElement = document.querySelector('#riddle-text')
+  let newDeathForm = document.querySelector('#name-form')
+  newDeathStoryElement.innerText = "You failed too many questions to protect Pico from The Great Deep! Look at how well you preformed.";
+  newDeathTitleElement.innerText = "Pico died!";
+  newDeathImageElement.innerText = "";
+  newDeathFinalElement.innerText = "";
+  newDeathForm.innerText = "";
+  postFinalStatistics(currentPlayer);
+}
+
+function postFinalStatistics(player) {
+  let finalPoints = document.querySelector('#points-counter').innerHTML
+  console.log(finalPoints);
+  player['final_points'] = finalPoints
+  player['problem_id'] = problemCounter
+
+  fetch("http://localhost:3000/gameover", {
+    method: "POST",
+    body: JSON.stringify(player),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => res.json())
+  .then(data => {
+    displayLeaderBoard(data);
+  })
+}
+
+function displayLeaderBoard(data){
+
+  let leaderBoardList = document.createElement('ul');
+  let leaderBoardLocation = document.querySelector('#riddle-text');
+  leaderBoardLocation.appendChild(leaderBoardList);
+
+  data.forEach(function (item, index) {
+    let newLi = document.createElement("li");
+    newLi.innerHTML = `${item.name} lost the game with ${item.leader_board_points} points at problem # ${item.problem_failed_at}`;
+    leaderBoardList.appendChild(newLi);
   });
 }
