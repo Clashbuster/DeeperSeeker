@@ -10,6 +10,7 @@ let problemCounter = 0;
 let currentAnswer = null;
 let currentHealth = 100;
 let currentHappiness = 100;
+let heartCounter = 0;
 
 // setting up the beggining of the page
 initialButton1Setup();
@@ -78,6 +79,7 @@ function setUpBtn1() {
         } else {
           currentHappiness -= 20;
           currentHealth -= 20;
+          displayNextHeart();
 
           if(currentHealth <= 0) {
             displayDeathScreen();
@@ -87,6 +89,13 @@ function setUpBtn1() {
         }
       })
 }
+
+function displayNextHeart(){
+  let oldHeart = document.querySelector('img#heart-stat')
+  heartCounter += 1;
+  oldHeart.src = `/Users/flatironschool/Desktop/Ruby_coding/mod3project/images/heart${heartCounter}.png`
+}
+
 
 //this function resets btn2 (the skip button)
 function setUpBtn2() {
@@ -110,7 +119,8 @@ function setUpBtn2() {
         
           currentHappiness -= 20;
           currentHealth -= 20;
-
+          displayNextHeart();
+          
           if(currentHealth <= 0) {
             displayDeathScreen();
           } else {

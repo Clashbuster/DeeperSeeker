@@ -18,6 +18,7 @@
     # t.string "name"
     # t.integer "points"
 
+
     Artifact.create(name: "The Wind Idol", points: 10)
     Artifact.create(name: "Joey's necklance", points: 5)
     Artifact.create(name: "Doge collar", points: 7)
@@ -122,7 +123,7 @@ Riddle.create(name: "The Great Trunk", points: 21, story_text: "Pico has descend
     correct_answer: 748317)   
 
     # after the great deep is revealed
-Riddle.create(name: "Even Fibbonacci numbers", points: 10, story_text: "Pico encounters a dusty tome on the ground. It's at least a thousand pages long and many of the pages are filled with some kind of code. He flips through it aimlessly since he can't make sense of a large string of digits like you can.
+Riddle.create(name: "Even Fibbonacci numbers", points: 19, story_text: "Pico encounters a dusty tome on the ground. It's at least a thousand pages long and many of the pages are filled with some kind of code. He flips through it aimlessly since he can't make sense of a large string of digits like you can.
 
     By pure chance he lands on a page with some english text. Since Pico is hopelessly curious he reads it.
 
@@ -142,7 +143,7 @@ Riddle.create(name: "Even Fibbonacci numbers", points: 10, story_text: "Pico enc
     correct_answer: 4613732)
 
 # Riddle.create(name: "Largest Prime Factor", points: 9, story_text)
-Riddle.create(name: "Prime Pair Sets", points: 45, story_text: "Pico reaches an end of a very long cat walk that doesn't appear to have any other way to descend. However, there are a number of oddly shaped ladders nearby. Since Pico is a dwarf I think we can trust him to put some things together.
+Riddle.create(name: "Prime Pair Sets", points: 320, story_text: "Pico reaches an end of a very long cat walk that doesn't appear to have any other way to descend. However, there are a number of oddly shaped ladders nearby. Since Pico is a dwarf I think we can trust him to put some things together.
 
     He eyes the ladders over and decides that he can stick them together end to end to make something that will work for him. This might we, but the exact measurements are a bit off.",
     riddle_text: "The primes 3, 7, 109, and 673, are quite remarkable. By taking any two primes and concatenating them in any order the result will always be prime. For example, taking 7 and 109, both 7109 and 1097 are prime. The sum of these four primes, 792, represents the lowest sum for a set of four primes with this property.
@@ -150,7 +151,7 @@ Riddle.create(name: "Prime Pair Sets", points: 45, story_text: "Pico reaches an 
     Find the lowest sum for a set of five primes for which any two primes concatenate to produce another prime.",
     correct_answer: 26033)
 
-Riddle.create(name: "Look at me, Look at you", points: 39, story_text: "Pico is getting pretty deep now. He's about halfway down the chamber with the austronautical vehicle. He turns a corner and on the wall there is an ominous message scribbled in what appears to be a brown paint of some kind, but the message is crude. It's been splattered on.
+Riddle.create(name: "Look at me, Look at you", points: 567, story_text: "Pico is getting pretty deep now. He's about halfway down the chamber with the austronautical vehicle. He turns a corner and on the wall there is an ominous message scribbled in what appears to be a brown paint of some kind, but the message is crude. It's been splattered on.
 
     \"Something is to be assumed. The Great Deep is something, and less than it, is less than you, and THAT is very small.
 
@@ -180,7 +181,7 @@ Riddle.create(name: "Look at me, Look at you", points: 39, story_text: "Pico is 
     correct_answer: 661)
 
 # medium problems
-Riddle.create(name: "Sum of all Primes", points: 30, story_text: "Pico ecounters a shrine that depicts thousands of The Great Deep's many tendrils, curling around every wall, furniture, and floor in the nearby area. He's not very scared because he know's the tendrils are all carved out of wood, but the scene is an eerie one. The central pedestal of the shrine contains a plaque surrounded by tall candles. The plaque say's the following words.
+Riddle.create(name: "Sum of all Primes", points: 432, story_text: "Pico ecounters a shrine that depicts thousands of The Great Deep's many tendrils, curling around every wall, furniture, and floor in the nearby area. He's not very scared because he know's the tendrils are all carved out of wood, but the scene is an eerie one. The central pedestal of the shrine contains a plaque surrounded by tall candles. The plaque say's the following words.
 
     The ultimate prime likes to know the power of all it's primes. Every last limb of The Great Deep is just as prime as the central entity itself.
 
@@ -191,7 +192,7 @@ Riddle.create(name: "Sum of all Primes", points: 30, story_text: "Pico ecounters
     Tell The Great Deep the sum of all primes below 2000000",
     correct_answer: 142913828922)
 
-Riddle.create(name: "Factorial Chain", points: 50, story_text: "Pico starts feel exhausted by all of the work he's doing, and at this point it's safe to assume that something scary is effecting everybody's minds.
+Riddle.create(name: "Factorial Chain", points: 689, story_text: "Pico starts feel exhausted by all of the work he's doing, and at this point it's safe to assume that something scary is effecting everybody's minds.
 
     Pico breaks out into a cold sweat. He starts to stumble on his feet for a moment. He tries to catch himself on the catwalk railing, but misses. Timber! He crashes into the floort.
 
@@ -242,11 +243,32 @@ Riddle.create(name: "Sum of All Progressive Perfect Squares below one trillion",
     correct_answer: 878454337159)
 
 
+Riddle.create(name: "Meet The Great Deep", points 934, story_text: "The Door Creaks open and on the other side a slithering noise comes through. It sounded like a million rubber sponges in a soap bath rubbing up against each other Pico stepped inside and at that second he could finally feel something. Even his dull mind could be effected when he was this close.
+
+    Pico shivered. A Booming voice echoed through the darkness and it seemed to reach even us, almost as if The Great Deep could sense us through pico.
+
+    \"You're messing with powers you don't understand.
+
+    You can't handle it.
+
+    You aren't strong enough.
+
+    I don't know how you got here, but I still have tricks up my sleeve.
+
+    No amount of math will stop me, I still contain this strong body.\"
+
+    Somehow we know The Great Deep is lieing. We've blown through every challenge he has given us, and now that we're here I think we can assume that he's scared, and therefore, grasping at straws. We should assume that the exact opposite of what he is saying will be effective against him.",
+
+    riddle_text: "a Sierpinski number is k such that k2n+1 will be composite for EVERY n >= 1
+
+    Give me the smalled proven Sierpinski number",
+
+    correct_answer: 78557)
 
 
 # After The Great Deep
 
-Riddle.create(name: "U+V", points: 1293, story_text: "Pico took on The Great Deep. Pico is too stupid to be effecte by anything, including The Great Deeps corruptive powers. We're not effected by corruptive powers because we're using Pico as a proxy. This is fantastic!. We can do anything! As long as Pico has our help we can take on even greater powers. The struggle never ends because there's always going to be a bigger fish to take down. Who's next?!
+Riddle.create(name: "U+V", points: 1293, story_text: "Pico took on The Great Deep. Pico is too stupid to be effected by anything, including The Great Deeps corruptive powers. We're not effected by corruptive powers because we're using Pico as a proxy. This is fantastic!. We can do anything! As long as Pico has our help we can take on even greater powers. The struggle never ends because there's always going to be a bigger fish to take down. Who's next?!
         
         I have an idea. Let's test our strength by conquring the power of light itself. Let's Solve U+V",
         
