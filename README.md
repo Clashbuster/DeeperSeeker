@@ -47,4 +47,10 @@ rails s
 
 6. At this open you should have the HTML file open in your browser and the backend api should be running. The game should not work locally on your machine.
 
-Have fun!
+This game features tons of artwork, story, and fun math based programming challenges. As you progress through the game you will recieve points from two sources. You will get a flat rate from the questions, and a randomized rate from artifacts. You will recieve one artifact with each completed question. Your points will be updated on the page as you progress, and once you beat or lose the game your points and name will be presisted in the database.
+
+you are allowed 4 skips/uncorrect answers. Once you have reached this limit you will lose the game! Also, Pico will get progressively unhappier and his heart will take more arrows the more questions are not completed.
+
+Once you have reached the leaderboard screen you are allowed to erase your score if it is unsatisfactory.
+
+Good luck and have fun!
