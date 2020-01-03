@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post '/players/new', to: 'players#create'
   post '/correctanswer', to: 'players#correct_answer'
   post '/gameover', to: 'players#game_over'
+  delete '/remove-player', to: 'players#remove_presence'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

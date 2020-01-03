@@ -1,5 +1,12 @@
 class PlayersController < ApplicationController
 
+        def remove_presence
+            player = Player.find(params[:id])
+            player.destroy
+
+            render json: "Removal completed"
+        end
+
         def game_over
 
             player = Player.find(params[:id])
@@ -8,7 +15,8 @@ class PlayersController < ApplicationController
             player.save
 
 
-            players = Player.all
+            players = Player.order('leader_board_points DESC')
+
             render json: players
         end
 
@@ -29,8 +37,14 @@ class PlayersController < ApplicationController
             player.artifacts.each do |n|
                 player_points += n.points
             end
-   
-            render json: player_points
+
+            correct_response = {}
+
+            correct_response['player_points'] = player_points
+            correct_response['new_artifact'] = artifact
+            # byebug
+
+            render json: correct_response
         end
 
         def show

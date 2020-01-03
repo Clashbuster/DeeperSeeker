@@ -18,6 +18,8 @@
     # t.string "name"
     # t.integer "points"
 
+    
+
 
     Artifact.create(name: "The Wind Idol", points: 10)
     Artifact.create(name: "Joey's necklance", points: 5)
@@ -32,7 +34,7 @@
     Artifact.create(name: "Robin's glasses", points: 12)
     Artifact.create(name: "A rock", points: 12)
     Artifact.create(name: "Drew's pills", points: 18)
-    Artifact.create(name: "Mox's marbles", points: 3)
+    Artifact.create(name: "Mox's dice", points: 3)
     Artifact.create(name: "Rubbish", points: 1)
     
 
@@ -42,11 +44,13 @@
 
 Riddle.create(name: "60th Triangle Number", points: 10, story_text: "Pico walks out of his home and looks up at the sky just long enough to see the sun for one last time. He's finally turned 40, and that means he's an adult now. So, he's going to do what all adult dwarfs do. Dig.
 
-    He pulls out his trusty shovel and starts parting the earth. Before long he descends through the soil, leaving the sun behind. The only light comes from his head-lamp and the only noise from his labored breathing. But like all dwarves he is a tireless creature.
+    He pulls out his trusty shovel and starts parting the earth. Before long, his entire body descends leaving the sun behind. The only light comes from his head-lamp and the only noise from his labored breathing. Don't worry, dwarves are tireless creatures.
        
-    After some time, and many, many meters of digging he falls into an empty cavern, but instead of hitting the soft earth he falls onto a slab of solid steel. He is unharmed, but he's perplexed by a massive metal door and a computer screen.
+    After some time, and many, many meters of digging he falls into an empty cavern, but instead of hitting the soft earth he falls onto a slab of solid steel. He is unharmed, but met by a massive metal door and a computer screen.
+
+    Pico doesn't know what all of this dad-gum technology is. He's never seen a metal door, much less a computer screen. It's basically magic to him.
     
-    The computer screen has a list of numbers and some instructions. He can't make sense of it, but maybe you can.", 
+    The computer screen has a list of numbers and some instructions. He can't make sense of it, but maybe we can.", 
     
     riddle_text: "Computer screen :
 
@@ -59,20 +63,20 @@ Riddle.create(name: "60th Triangle Number", points: 10, story_text: "Pico walks 
 
 Riddle.create(name: "Sum of Multiples", points: 10, story_text: "Pico entered some things into the computer screen. You don't exactly know what he entered, but you hope he listened to your advice. A light above the door blinked red for a few seconds. Then it slid open, allowing steam to escape through the cracks.
     
-    Pico walked into a room made entirely out of chrome. A large screen to the left shows a large astronautical vehicle set up with some scaffolding, but each of the connectors for the scaffold blinked red.",
+    Pico walked through the doorway without a thought in the world. The new room was another large with with a lot of metal panels and a little bit of earth. A large screen to the left showed an astronautical vehicle set up with some scaffolding, but each of the connectors for the scaffold blinked red. He stared at the keyboard with a blank face. Looks like it's our turn.",
     
     riddle_text: "Alert! Before launch, all of the connectors must be mapped.
     
-    The scaffold is 999 feet high. There must be ONE connector at every mutliple of 3 or 5 feet. In order for the computer to know you've completed the connector mapping, report the sum of every connector's height.",
+    The scaffold is 999 feet high. There must be ONE connector at every mutliple of 3 and 5 feet. In order for the computer to know you've completed the connector mapping, report the sum of every connector's height.",
     correct_answer: 233168)
 
 
 
 # Riddle.create(name: "Difference of Squares", points: 10, story_text: "Pico")
 
-Riddle.create(name: "Largest Prime Factor", points: 9, story_text: "Pico entered in what you suggested, but he has no idea if it was correct. All he knows is a second door opened to reveal a massive launch chamber with a huge ship in the center and a closed silo lid at the top. Throughout the complex there are many half-working lights, delapidated machines, and thin catalks. The place is overgrown with plants, and some of the rooms have been caved in. There are weird red flags posted everywhere with an ominous black symbol
+Riddle.create(name: "Largest Prime Factor", points: 9, story_text: "Pico heard our whisper in his head and enetered our code into the computer. A second door opened to reveal a colossal launch chamber with a huge ship in the center and a closed silo at the top. Pico stood in the middle of a massive man-made complex with many half-working lights, delapidated machines, and thin catwalks. The place was overgrown with plants, and some of the rooms had been caved in. There are weird red flags posted everywhere with an ominous black symbol depicting some hideous sillouhette that looked like an octopus of some kind.
 
-    Pico has never seen a computer or even a metal door. All he knows is the colossal chamber extends downward further than the eye could see, which delights him because that means he can keep going deeper while saving some energy.
+    All Pico coulkd thing about was that the colossal chamber extended downward further than the eye could see, which delighted him because that meant he could keep going deeper while saving some energy.
 
     Pico took one step towards a nearby catwalk when a bored voice came over a nearby intercom.
 
@@ -85,7 +89,7 @@ Riddle.create(name: "Largest Prime Factor", points: 9, story_text: "Pico entered
     What is the largest prime factor of the number 600851475143?",
     correct_answer: 6857)
 
-Riddle.create(name: "Palindrome Number", points: 6, story_text: "Pico walks some way down a catwalk. Periodically he finds some stairs leading downward. He seems happy with his progres so that should make us feel pretty good. Just as Pico crosses an open doorway somebody calls out.
+Riddle.create(name: "Palindrome Number", points: 6, story_text: "Pico walked down a catwalk. Periodically he finds some stairs leading downward. He seems happy with his progress so that should make us feel pretty good. Just as Pico crosses an open doorway somebody calls out.
 
     \"Hey! I see doubles!
 
@@ -95,25 +99,33 @@ Riddle.create(name: "Palindrome Number", points: 6, story_text: "Pico walks some
 
     I'll get angry if you don't give me more doubles.\"
 
-    It's a man wearing a lab coat standing in a room, staring at the ceiling. He doesn't seem to notice Pico or much of anything else. Pico waits for a long time, but the man simply repeates what he said.
+    A man wearing a lab coat stood in a room. He doesn't seem to notice Pico or much of anything else. Pico waited for a long time, but the man simply repeated what he said, did a 90 degree turn and held up two fingers to the wall.
 
-    Pico is so dumb that he doesn't know what doubles could possibly mean. Maybe we could help",
+    Pico does not know what doubles means. Perhaps this is another chance for us to help.",
 
     riddle_text: "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 
     Find the largest palindrome made from the product of two 3-digit numbers.",
     correct_answer: 906609)
 
-Riddle.create(name: "Smallest Common Multiple", points: 7, story_text: "As Pico descends he decides that he's feeling smaller and smaller by the second and he can't explain why. Perhaps we can use problem as a metaphor to teach him that he is not as small as he seems.",
+Riddle.create(name: "Smallest Common Multiple", points: 7, story_text: "As Pico descended he decided that he felt smaller and smaller by the second and he can't explain why.
+
+After a minute he started talking to himself \"I don't think I can do this, I'm not sure if I'm good enough.
+    
+    This place is very scary and big, too big for a dwarf. The people are unfriendly and the environment is harsh.\"
+
+    After a bit of this damnable talk he slid up against a wall and sat with his head hung low.
+
+    The longer this goes on the worse our chances of success are. Pico's bad mood will make every he does worse. We need Pico to be feeling great if he's going to preform well for the rest of this adventure. Perhaps we can use a problem as a metaphor to teach him that he is not as small as he seems.",
 
     riddle_text: "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
     What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?",
     correct_answer: 232792560)
 
-Riddle.create(name: "The Great Trunk", points: 21, story_text: "Pico has descended so far that he can no longer see the unopened silo ceiling and instead can only see a dimly lit cavern going even deeper. He's near the bottom of astronautical vehicle. It's difficult to make out given the light, but near the base of the ship there is a colossal tree that appears to be growing into the bottom of the ship.
+Riddle.create(name: "The Great Trunk", points: 21, story_text: "Pico descended so far that he could no longer see the silo ceiling and instead could only see a dimly lit cavern going even deeper. He was near the bottom of astronautical vehicle. It was difficult to make out given the light, but near the base of the ship a monsterous tree twisted upwards and around the leg of the ship. It's gnarly branches and roots bent every which way as if in a desperate search in any random direction for more light. It made for a hideous sight.
 
-    Pico had no idea such great things could thrive down here. Things besides The Great Deep that is. Considering what we are headed towards I think we should take note of something that can withstand the incredible pressure of the great deep. Therefore, let's take note of truncatable primes. They are rare and valuable things.",
+    Pico had no idea such great things could thrive down here. Even thought it was clear that the tree was being effected by The Great Deep's presence, it's important to note that it could withstand the pressure for so long. I think it will be a good idea to remember things that are strong enough to live down here. Therefore, let's take note of truncatable primes. They are rare and valuable things.",
 
     riddle_text: "The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. Similarly we can work from right to left: 3797, 379, 37, and 3.
 
@@ -123,16 +135,17 @@ Riddle.create(name: "The Great Trunk", points: 21, story_text: "Pico has descend
     correct_answer: 748317)   
 
     # after the great deep is revealed
-Riddle.create(name: "Even Fibbonacci numbers", points: 19, story_text: "Pico encounters a dusty tome on the ground. It's at least a thousand pages long and many of the pages are filled with some kind of code. He flips through it aimlessly since he can't make sense of a large string of digits like you can.
+Riddle.create(name: "Even Fibbonacci numbers", points: 19, story_text: "Pico encountered a dusty tome on the ground. It was at least a thousand pages long and many of the pages were filled with some kind of code. He flipped through it aimlessly since he can't make sense of code nearly as well as we can.
 
-    By pure chance he lands on a page with some english text. Since Pico is hopelessly curious he reads it.
+    Eventually, he landed on a page with some english text. Since Pico is hopelessly curious he read it.
 
-    \" My name is Herald, and I used to be scientist. That's right. Used to be. Now I'm a ground prophet haha! Ground prophets are the greatest, and like all ground prophets I know lots of things about The Great Deep.
-    For Example, his Deepness seems to like things that are clean. That's why we clean our labs so much. Spend all day cleaning. But after contemplating the Deep visions for many days I've learned that clean can be interpreted in many ways.
+    \" My name is Herald, and I used to be scientist. That's right. Used to be. Now I'm a ground prophet. Ground prophets are the greatest, and like all ground prophets I know lots of things about The Great Deep.
 
-    Since I'm a ground prophet it's my job to interpret the Deepeness's visions, and I've decided that even numbers are clean, and we need more even numbers isn't that right Jerry?\"
+    For Example, his Deepness seems to like things that are clean. That's why we clean our labs so much. Spend all day cleaning And with the clean comes the visions. Not everybody takes the visions well, but I can handle them just fine. That must mean I'm chosen or something. I've decided that the best thing I can do is try to interpret them. I have thoughts about what clean means.
 
-    The passage becomes pure jibberish after that, and even Pico with his dull mind finds it odd that Herald the ex scientist would be asking Jerry things in writing like that. In any case there is a box on the next page that asks a question.",
+    I've decided that even numbers are pretty clean, and we need more even numbers isn't that right Jerry?\"
+
+    The passage becomes pure jibberish after that, and even Pico with his dullness finds it odd that Herald the scientist would be asking Jerry things in writing like that. In any case there is a box on the next page that asks a question.",
 
     riddle_text: "Since The Great Deep likes even numbers he wants to see their power too.
 
@@ -143,21 +156,22 @@ Riddle.create(name: "Even Fibbonacci numbers", points: 19, story_text: "Pico enc
     correct_answer: 4613732)
 
 # Riddle.create(name: "Largest Prime Factor", points: 9, story_text)
-Riddle.create(name: "Prime Pair Sets", points: 320, story_text: "Pico reaches an end of a very long cat walk that doesn't appear to have any other way to descend. However, there are a number of oddly shaped ladders nearby. Since Pico is a dwarf I think we can trust him to put some things together.
+Riddle.create(name: "Prime Pair Sets", points: 320, story_text: "Pico reached an end of a very long cat walk that doesn't appear to have any other way to descend. However, there are a number of oddly shaped ladders nearby. Since Pico is a dwarf I think we can trust him to put some things together.
 
-    He eyes the ladders over and decides that he can stick them together end to end to make something that will work for him. This might we, but the exact measurements are a bit off.",
+    He eyed the ladders over and decides that he can stick them together end to end to make something that will work for him. This might be, but the exact measurements are a bit off.",
+
     riddle_text: "The primes 3, 7, 109, and 673, are quite remarkable. By taking any two primes and concatenating them in any order the result will always be prime. For example, taking 7 and 109, both 7109 and 1097 are prime. The sum of these four primes, 792, represents the lowest sum for a set of four primes with this property.
 
     Find the lowest sum for a set of five primes for which any two primes concatenate to produce another prime.",
     correct_answer: 26033)
 
-Riddle.create(name: "Look at me, Look at you", points: 567, story_text: "Pico is getting pretty deep now. He's about halfway down the chamber with the austronautical vehicle. He turns a corner and on the wall there is an ominous message scribbled in what appears to be a brown paint of some kind, but the message is crude. It's been splattered on.
+Riddle.create(name: "Look at me, Look at you", points: 567, story_text: "Pico was getting pretty deep, and thr ship was bare in view. Things were starting to get a little more ominous. He turned a corner and on the wall there was an ominous message scribbled in what appears to be a brown paint of some kind, but the message was crude.
 
-    \"Something is to be assumed. The Great Deep is something, and less than it, is less than you, and THAT is very small.
+    \"Something is to be assumed. The Great Deep is something, and less than it, is greater than you, and THAT is very small.
 
     Let it be known that however big you are, The Great Deep is bigger still. Big enough for mountains.\"
 
-    Pico is very confused by this statement so let's make it easier on us by putting it in numbers.",
+    Pico was left very confused by this statement so let's make it easier on him by putting it in numbers.",
 
     riddle_text: "Consider quadratic Diophantine equations of the form:
 
@@ -181,22 +195,22 @@ Riddle.create(name: "Look at me, Look at you", points: 567, story_text: "Pico is
     correct_answer: 661)
 
 # medium problems
-Riddle.create(name: "Sum of all Primes", points: 432, story_text: "Pico ecounters a shrine that depicts thousands of The Great Deep's many tendrils, curling around every wall, furniture, and floor in the nearby area. He's not very scared because he know's the tendrils are all carved out of wood, but the scene is an eerie one. The central pedestal of the shrine contains a plaque surrounded by tall candles. The plaque say's the following words.
+Riddle.create(name: "Sum of all Primes", points: 432, story_text: "Pico ecountered a shrine that depicted thousands of The Great Deep's many tendrils, curling around every wall, furniture, and floor in the nearby area. He was not scared because he know's the tendrils are all carved out of wood, but the scene is an eerie one. The central pedestal of the shrine contained a plaque surrounded by tall candles. The plaque said the following words.
 
-    The ultimate prime likes to know the power of all it's primes. Every last limb of The Great Deep is just as prime as the central entity itself.
+    \"The ultimate prime likes to know the power of all it's primes. Every last limb of The Great Deep is just as prime as the central entity itself.
 
-    The Great Deep will greatly reward all who know his power",
+    The Great Deep will greatly reward all who know his power\"",
 
     riddle_text: "The sum of all primes below 10 is 2+3+5+7 = 17
 
     Tell The Great Deep the sum of all primes below 2000000",
     correct_answer: 142913828922)
 
-Riddle.create(name: "Factorial Chain", points: 689, story_text: "Pico starts feel exhausted by all of the work he's doing, and at this point it's safe to assume that something scary is effecting everybody's minds.
+Riddle.create(name: "Factorial Chain", points: 689, story_text: "Pico started feeling exhausted by all of the work he'd done, and at this point it's safe to assume that something was effecting the scientists minds.
 
-    Pico breaks out into a cold sweat. He starts to stumble on his feet for a moment. He tries to catch himself on the catwalk railing, but misses. Timber! He crashes into the floort.
+    Pico broke out into a cold sweat. He started to stumble on his feet for a moment. He tried to catch himself on the catwalk railing, but missed. Pico fell onto the floor, motionless.
 
-    Since we are omnipotent we get to see his dreams while he's passed out. Theres not a lot to see here, because Pico is so simple, but he can see a bunch of chains flying around.
+    Since we know everything about pico we get to see his dreams while he's passed out. Theres not a lot to see here, because Pico is so simple, but we can see a bunch of chains flying around.
 
     Maybe those chains represent something? We can't be sure, but let's err on the side of caution and help him unravel those.",
 
@@ -225,11 +239,11 @@ Riddle.create(name: "Factorial Chain", points: 689, story_text: "Pico starts fee
 # Very hard problems
 Riddle.create(name: "Sum of All Progressive Perfect Squares below one trillion", points: 880, story_text: "Pico has been through so much, and seen things he never could have imagined even existed. His mind has been bent and so have ours. He's made his way through all the doors and all the challenges, and hes descended through all of the chambers, rooms, caverns, and pathways. All of that effort has led him to this... this dark room at the end of a monsterous passage.
 
-    In the dark, his eyes finally adjust and he sees a simple door made from petrified wood that looked older than the earth itself. A single, large eye was engraved in the center.
+    In the dark, his eyes finally adjusted and he saw a simple door made from petrified wood that looked older than the earth itself. A single, large eye was engraved in the center.
 
     At this point we should know that The Great Deep expects us to challenge ourselves, and judging from the problems we have had to solve so far we should have a pretty good idea of how hard we now must try to get through this final door.
 
-    I've been working on something that is pretty astronomical for you, and it's safe to say that Pico would call it pure magic if he ever got see it. I think it is a problem that would impress even The Great Deep.",
+    I've been working on something that is pretty astronomical for you, and it's safe to say that Pico would get us through even the door of The Great Deep.",
 
     riddle_text: "A positive integer, n, is divided by d and the quotient and remainder are q and r respectively. In addition d, q, and r are consecutive positive integer terms in a geometric sequence, but not necessarily in that order.
 
@@ -243,34 +257,32 @@ Riddle.create(name: "Sum of All Progressive Perfect Squares below one trillion",
     correct_answer: 878454337159)
 
 
-Riddle.create(name: "Meet The Great Deep", points 934, story_text: "The Door Creaks open and on the other side a slithering noise comes through. It sounded like a million rubber sponges in a soap bath rubbing up against each other Pico stepped inside and at that second he could finally feel something. Even his dull mind could be effected when he was this close.
+Riddle.create(name: "Meet The Great Deep", points: 934, story_text: "The Door creaked open and on the other side a slithering noise came through. It was like a million rubber sponges in a soap bath rubbing up against each other Pico stepped inside and at that second he could finally feel something. Even his dull mind could be effected when he was this close.
 
-    Pico shivered. A Booming voice echoed through the darkness and it seemed to reach even us, almost as if The Great Deep could sense us through pico.
+    Pico shivered. A Booming voice roared through the room and it seemed to reach even us, almost as if The Great Deep could sense us through pico.
 
     \"You're messing with powers you don't understand.
 
-    You can't handle it.
+    What you've done so far is no more than rubbing two particles of sand together on the beach of my realm.
+    
+    Turn back or you'll be stuck here forever.\"
 
-    You aren't strong enough.
-
-    I don't know how you got here, but I still have tricks up my sleeve.
-
-    No amount of math will stop me, I still contain this strong body.\"
-
-    Somehow we know The Great Deep is lieing. We've blown through every challenge he has given us, and now that we're here I think we can assume that he's scared, and therefore, grasping at straws. We should assume that the exact opposite of what he is saying will be effective against him.",
+    At this point I think we should keep using the same tactics that have gotten us this far. If math could get us through the petrified door and every other challenge, it could probably get us through this too. Let's come up with something and throw it at The Great Deep to see what happens.",
 
     riddle_text: "a Sierpinski number is k such that k2n+1 will be composite for EVERY n >= 1
 
-    Give me the smalled proven Sierpinski number",
+    Give me the smallest proven Sierpinski number",
 
     correct_answer: 78557)
 
 
 # After The Great Deep
 
-Riddle.create(name: "U+V", points: 1293, story_text: "Pico took on The Great Deep. Pico is too stupid to be effected by anything, including The Great Deeps corruptive powers. We're not effected by corruptive powers because we're using Pico as a proxy. This is fantastic!. We can do anything! As long as Pico has our help we can take on even greater powers. The struggle never ends because there's always going to be a bigger fish to take down. Who's next?!
+Riddle.create(name: "U+V", points: 1293, story_text: "Pico whispers the Sierpinski number. Nothing happens for a few seconds, but The Great Deep stopped moving. Then we all feel the relief. The pressure on pico's mind dissipated. A few seconds later The Great Deep's giant body began to crumble and fall apart. All of it's mighty tendrils fell to the ground and it's towering body collapsed. Before long it was nothing more than a giant heap on the ground.
+
+        Pico stood triumphant, and he didn't even know we were involved. We'de taken on something much greater than ourselves and done just fine. All it took was a bit of effort and knoweldge. It's incredible.
         
-        I have an idea. Let's test our strength by conquring the power of light itself. Let's Solve U+V",
+        With Pico's resiliance and our brains we can accomplish anything, including shedding light on this dark place. All we need to do is gain the power of UV",
         
         riddle_text: "For any integer n, consider the three functions
 

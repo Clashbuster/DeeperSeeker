@@ -125,12 +125,14 @@ body {
 
 
   ul#decisions-list {
-    padding: 0px;
+    padding: 1px;
+    max-height: 90%;
     grid-row-start: bthird;
     grid-row-end: bfourth;
     list-style: none;
     display: grid;
-    grid-template-columns: [dlfirst] 40% [dlsecond] 40% [dlthird] 20%;
+    grid-template-columns: [dlfirst] 40% [dlsecond] 40% [dlthird] 20% [dlfourth] 0%;
+    grid-template-rows: [dlrfirst] 95% [dlrsecond] 0%;
   }
 
 li#story-text {
@@ -190,18 +192,19 @@ img#character-picture {
 }
 
 li#btn1 {
+  grid-column-start: dlfirst;
+  grid-column-end: dlsecond;
+  grid-row-start: dlrfirst;
+  grid-row-end: dlrsecond;
   border-radius: 12px;
   height: 30%;
   width: 50%;
-  /* background-color: #f67280; */
+  
   margin-top: 8%;
-  margin-bottom: 8%;
+  margin-bottom:8%;
   margin-right: 24%;
   margin-left: 24%;
-  /* padding-top: 8%;
-  padding-bottom: 8%;
-  padding-right: 24%;
-  padding-left: 24%; */
+  /* padding: 5%; */
   text-align: center;
   background-image: url("images/toolnav.png");
   display: table;
@@ -218,10 +221,15 @@ li#btn1 p {
 }
 
 li#btn2 {
+  grid-row-start: dlrfirst;
+  grid-row-end: dlrsecond;
+  grid-column-start: dlsecond;
+  grid-column-end: dlthird;
   border-radius: 12px;
   height: 30%;
   width: 50%;
   /* background-color: #f67280; */
+ 
   margin-top: 8%;
   margin-bottom: 8%;
   margin-right: 24%;
@@ -305,10 +313,46 @@ p#points-counter {
   margin-bottom: 0%;
   /* height: 100%;
   width: 100%; */
-  padding-top: 35%;
+  padding-top: 30%;
   /* text-align: center; */
   vertical-align: middle;
   /* justify-self: center; */
+}
+
+
+ul#artifacts {
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+  grid-row-start: dlrfirst;
+  grid-row-end: dlrsecond;
+  height: 90%;
+  width: 90%;
+  padding: 5px;
+  margin: 0%;
+  grid-column-start: dlthird;
+  grid-column-end: dlfourth;
+}
+
+.artifact {
+  margin: 0%;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.artifact .artifact-description {
+  display:none;
+}
+
+.artifact:hover .artifact-description {
+    display:inline-block;
+    /* height: 60px;
+    width: 80px; */
+    position:absolute;
+    background:rgba(0,0,0, 0.5); color:white;
+    text-align: center;
+    padding:5px;
+    border-radius: 8px;
 }
 
 
