@@ -12,6 +12,7 @@ let currentHealth = 100;
 let currentHappiness = 100;
 let heartCounter = 0;
 let storyImageCounter = 1
+let smileyCounter = 0;
 
 // setting up the beggining of the page
 initialButton1Setup();
@@ -87,7 +88,7 @@ function setUpBtn1() {
           currentHappiness -= 20;
           currentHealth -= 20;
           displayNextHeart();
-         
+          displayNextSmiley()
           if(currentHealth <= 0) {
             displayDeathScreen();
           } else {
@@ -102,6 +103,12 @@ function displayNextHeart(){
   let oldHeart = document.querySelector('img#heart-stat')
   heartCounter += 1;
   oldHeart.src = `images/heart${heartCounter}.png`
+}
+
+function displayNextSmiley(){
+  let oldSmiley = document.querySelector('img#smiley-face')
+  smileyCounter += 1;
+  oldSmiley.src = `images/smiley face${smileyCounter}.png`
 }
 
 let displayNextStoryImage = () => {
@@ -134,7 +141,7 @@ function setUpBtn2() {
           currentHappiness -= 20;
           currentHealth -= 20;
           displayNextHeart();
-          
+          displayNextSmiley()
           if(currentHealth <= 0) {
             displayDeathScreen();
           } else {
