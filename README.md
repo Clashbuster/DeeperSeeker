@@ -42,10 +42,18 @@ open index.html
 5. Go into the Deeper Seeker api directory. Type :
 
 ```
+rails db:migrate
+```
+
+```
+rails db:seed
+```
+
+```
 rails s
 ```
 
-6. At this open you should have the HTML file open in your browser and the backend api should be running. The game should not work locally on your machine.
+6. At this open you should have the HTML file open in your browser and the backend api should be running. The last step is to refresh the web page. The game should now work locally on your machine.
 
 This game features tons of artwork, story, and fun math based programming challenges. As you progress through the game you will recieve points from two sources. You will get a flat rate from the questions, and a randomized rate from artifacts. You will recieve one artifact with each completed question. Your points will be updated on the page as you progress, and once you beat or lose the game your points and name will be presisted in the database.
 
