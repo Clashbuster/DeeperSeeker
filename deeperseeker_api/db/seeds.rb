@@ -36,6 +36,8 @@
     Artifact.create(name: "Drew's pills", points: 18)
     Artifact.create(name: "Mox's dice", points: 3)
     Artifact.create(name: "Rubbish", points: 1)
+    Artifact.create(name: "katrina's scarf", points: 15)
+    Artifact.create(name: "Bahay's books", points: 13)
     
 
 
